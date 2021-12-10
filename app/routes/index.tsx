@@ -34,8 +34,6 @@ import { BudgetData, getBudgetsForMonth } from "../lib/lm-api";
 
 export const loader: LoaderFunction = async () => {
   let data = await getBudgetsForMonth();
-  console.log({ data });
-
   return json(data);
 };
 

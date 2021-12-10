@@ -19,9 +19,7 @@ export interface BudgetData {
 export async function getBudgetsForMonth(): Promise<BudgetData> {
   const headers = new Headers();
 
-  console.log({ LM_TOKEN });
-
-  headers.set("Authorization", `Bearer ${LM_TOKEN}`);
+  headers.set("Authorization", `Bearer ${process.env.LM_TOKEN}`);
 
   const startDate = "2021-12-01";
   const endDate = "2021-12-31";
